@@ -1,39 +1,26 @@
+/* colors */
 * {
   padding: 0;
   margin: 0;
   box-sizing: content-box;
 }
 
-header {
-  display: flex;
-}
-
-/*..........................................*/
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-}
-
 body {
   font-family: "Raleway", sans-serif;
-  background-color: rgb(29, 29, 29);
+  color: rgb(248, 248, 248);
   overflow-x: hidden;
 }
 
-.nav-logo {
+header {
+  display: flex;
+}
+header .nav-logo {
   width: 100px;
 }
-
-.main__imagen-principal {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+header *, header *:before, header *:after {
+  box-sizing: border-box;
 }
-
-label .menu {
+header label .menu {
   position: absolute;
   right: -80px;
   top: -80px;
@@ -45,65 +32,54 @@ label .menu {
   box-shadow: 0 0 0 0 rgba(202, 202, 202, 0.377), 0 0 0 0 #FFF;
   cursor: pointer;
 }
-
-label .hamburger {
+header label .hamburger {
   position: absolute;
   top: 135px;
   left: 50px;
   width: 30px;
   height: 2px;
-  background: #303030;
+  background-color: rgb(24, 24, 24);
   display: block;
   transform-origin: center;
   transition: 0.5s ease-in-out;
 }
-
-label .hamburger:after, label .hamburger:before {
+header label .hamburger:after, header label .hamburger:before {
   transition: 0.5s ease-in-out;
   content: "";
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
-  background: #303030;
+  background: rgb(24, 24, 24);
 }
-
-label .hamburger:before {
+header label .hamburger:before {
   top: -10px;
 }
-
-label .hamburger:after {
+header label .hamburger:after {
   bottom: -10px;
 }
-
-label input {
+header label input {
   display: none;
 }
-
-label input:checked + .menu {
+header label input:checked + .menu {
   box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
   border-radius: 0;
 }
-
-label input:checked + .menu .hamburger {
+header label input:checked + .menu .hamburger {
   transform: rotate(45deg);
 }
-
-label input:checked + .menu .hamburger:after {
+header label input:checked + .menu .hamburger:after {
   transform: rotate(90deg);
   bottom: 0;
 }
-
-label input:checked + .menu .hamburger:before {
+header label input:checked + .menu .hamburger:before {
   transform: rotate(90deg);
   top: 0;
 }
-
-label input:checked + .menu + ul {
+header label input:checked + .menu + ul {
   opacity: 1;
 }
-
-label ul {
+header label ul {
   z-index: 200;
   position: absolute;
   top: 50%;
@@ -112,35 +88,18 @@ label ul {
   opacity: 0;
   transition: 0.25s 0s ease-in-out;
 }
-
-label a {
+header label a {
   margin-bottom: 2em;
   display: block;
-  color: #303030;
+  color: rgb(24, 24, 24);
   text-decoration: none;
 }
-
-/*..........................................*/
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.main__p {
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-link {
+header .nav-link {
   padding: 50px;
   color: gray;
 }
-
-a.nav-link:hover {
-  color: black;
+header a.nav-link:hover {
+  color: rgb(24, 24, 24);
   transform: scale(0.98);
 }
 
@@ -199,10 +158,6 @@ form {
   flex-direction: column;
   flex-wrap: wrap;
   width: 300px;
-}
-
-.container-c__isaac-alfaro h2 {
-  padding-top: 14px;
 }
 
 .container-c__imagen {
@@ -290,14 +245,6 @@ form {
   transform: scale(1.01);
 }
 
-.a {
-  background-color: antiquewhite;
-}
-
-.b {
-  background-color: rgb(255, 246, 234);
-}
-
 /*------------ shop  ---------*/
 .grid-container-shop {
   display: grid;
@@ -330,6 +277,31 @@ form {
 
 .contenedor-search h3 {
   padding: 40px;
+  position: relative;
+}
+
+.contenedor-search h3::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.contenedor-search h3:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.contenedor-search h3::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: antiquewhite;
+  z-index: -1;
+  transition: transform 0.3s ease;
 }
 
 .group {
@@ -453,25 +425,44 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 40px;
-  background-color: antiquewhite;
+  background-color: rgb(250, 235, 215);
   bottom: 0;
 }
-
-.rrss {
+footer .rrss {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   width: 100vh;
 }
-
-.rrss__logos {
+footer .rrss__logos {
   width: 25px;
 }
-
-.footer-texto {
+footer .footer-texto {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 14px;
+}
+footer p {
+  color: rgb(24, 24, 24);
+}
+
+/* main */
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main p {
+  color: rgb(24, 24, 24);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+main __imagen-principal {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=styles.css.map */

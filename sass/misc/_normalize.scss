@@ -1,4 +1,6 @@
 
+@import "./mixins";
+
 *{
     padding: 0;
     margin: 0;
@@ -7,6 +9,30 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    color: $color-principal;
     overflow-x: hidden;
+}
+
+$headings: (
+    h1: 36px,
+    h2: 26px,
+    h3: 22px,
+    h5: 16px,    
+);
+
+$h1: map-get ($headings, h1);
+
+h1 {
+    @include fontStyle ($color-secundario, h1);
+}
+
+h2 {
+    @include fontStyle ($color-secundario, h2);
+}
+
+h5 {
+    @include fontStyle ($color-secundario, h5);
+}
+
+h3 {
+    @include fontStyle ($color-secundario, h3);
 }

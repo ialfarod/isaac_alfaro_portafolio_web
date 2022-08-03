@@ -7,8 +7,27 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  color: rgb(248, 248, 248);
   overflow-x: hidden;
+}
+
+h1 {
+  color: rgb(24, 24, 24);
+  font-size: h1;
+}
+
+h2 {
+  color: rgb(24, 24, 24);
+  font-size: h2;
+}
+
+h5 {
+  color: rgb(24, 24, 24);
+  font-size: h5;
+}
+
+h3 {
+  color: rgb(24, 24, 24);
+  font-size: h3;
 }
 
 header {
@@ -101,6 +120,11 @@ header .nav-link {
 header a.nav-link:hover {
   color: rgb(24, 24, 24);
   transform: scale(0.98);
+}
+
+p {
+  color: rgb(24, 24, 24);
+  font-size: 14px;
 }
 
 .gallery__imagen:hover {
@@ -233,6 +257,7 @@ form {
 }
 
 .grid-item {
+  background-color: rgb(24, 24, 24);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,6 +268,7 @@ form {
 
 .grid-item:hover {
   transform: scale(1.01);
+  background-color: rgb(250, 235, 215);
 }
 
 /*------------ shop  ---------*/
@@ -256,7 +282,7 @@ form {
 }
 
 .grid-item-shop {
-  background-color: antiquewhite;
+  background-color: rgb(24, 24, 24);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -446,6 +472,7 @@ footer .footer-texto {
 }
 footer p {
   color: rgb(24, 24, 24);
+  font-size: 14px;
 }
 
 /* main */
@@ -457,6 +484,7 @@ main {
 }
 main p {
   color: rgb(24, 24, 24);
+  font-size: 20px;
   font-weight: 400;
   display: flex;
   justify-content: center;

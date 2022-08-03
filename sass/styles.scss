@@ -2,8 +2,11 @@
 @import "./misc/variables";
 @import "./misc/normalize";
 @import "./partials/header";
+@import "./misc/mixins";
 
-
+p{
+    @include fontStyle ($color-secundario, 14px);
+}
 
 .gallery__imagen:hover{
     transform: scale(1.04);
@@ -140,6 +143,7 @@ form{
 }
 
 .grid-item{
+    background-color: $color-secundario;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,6 +154,7 @@ form{
 
 .grid-item:hover{
     transform: scale(1.01);
+    background-color: $color-alternativo;
 }
 
 
@@ -166,7 +171,7 @@ form{
 }
 
 .grid-item-shop{
-    background-color: antiquewhite;
+    background-color: $color-secundario;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -397,7 +402,7 @@ footer{
     }
 
     p{
-    color: $color-secundario;
+    @include fontStyle ($color-secundario, 14px);
     }
 }
 
@@ -415,7 +420,7 @@ main{
     flex-wrap: wrap;
 
     p{
-    color: $color-secundario;
+    @include fontStyle ($color-secundario, 20px);
     font-weight: 400;
     display: flex;
     justify-content: center;
